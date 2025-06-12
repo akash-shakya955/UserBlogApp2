@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+}
+
+h2 {
+  color: #34495e;
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:not(.danger):not(.clear-button) {
+  background-color: #3498db;
+  color: white;
+}
+
+button:not(.danger):not(.clear-button):hover {
+  background-color: #2980b9;
+}
+
+button.danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.danger:hover {
+  background-color: #c0392b;
+}
+
+button.clear-button {
+  background-color: #95a5a6;
+}
+
+button.clear-button:hover {
+  background-color: #7f8c8d;
+}
+
+/* Inputs, Selects, and Textareas */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+select[multiple] {
+  height: 120px;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.view-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.view-field label {
+  width: 150px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.view-field input {
+  background-color: #f9f9f9;
+  cursor: not-allowed;
+  flex: 1;
+}
+
+.view-field img {
+  max-width: 100px;
+  border-radius: 5px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ececec;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+table td {
+  color: #555;
+}
+
+table tr:hover {
+  background-color: #f8f9fb;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions a,
+.actions button {
+  font-size: 0.9rem;
+}
+
+/* Filter Container */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+/* View Page Styling */
+.view-page p {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f8f9fb;
+  border-radius: 5px;
+}
+
+.view-page strong {
+  display: inline-block;
+  width: 150px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Error Messages */
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Loading Message */
+p {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .view-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .view-field label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
